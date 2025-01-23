@@ -19,7 +19,6 @@ int main(){
 
     // Display the question and options
     displayQuestion(question1, options1, correctOption1);
-
     // Get user input
     char answer;
     scanf(" %c", &answer);
@@ -88,9 +87,13 @@ int main(){
         printf("Excellent work!\n");
     } else if (score == 1) {
         printf("Good try, but you can do better!\n");
-    } else {
+    } else if (score == 2){
+        printf("Great, but you can do better\n");
+    }
+    else {
         printf("Better luck next time!\n");
     }
 
     return 0;
 }
+
