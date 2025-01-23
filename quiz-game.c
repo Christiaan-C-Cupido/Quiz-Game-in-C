@@ -58,10 +58,33 @@ int main(){
         printf("Wrong! The correct answer is %c) %s\n", correctOption2, options2[1]);
     }
 
+//======================================================================================
+
+    //Question 3
+    char question3[] = "What is the chemical symbol for Gold?";
+    char options3[][50] = {"Go", "Au", "Ag", "Gd"};
+    char correctOption3 = 'B';
+
+    //Display the question and option
+    displayQuestion(question3, options3, correctOption3);
+
+    //Get user input
+    scanf(" %c", &answer);
+
+    //Contert answer to uppercase for case-insensitive comprison
+    answer = toupper(answer);
+
+    //Convert input to uppercase for case-insenstive comparison
+    if (answer == correctOption3) {
+        printf("Correct!\n");
+        score++;
+    } else {
+        printf("Wrong! The correct answer is %c) %s\n", correctOption3, options3[1]);
+    }
 
     // Final Score
-    printf("\nYour final score is: %d/2\n", score);
-    if (score == 2) {
+    printf("\nYour final score is: %d/3\n", score);
+    if (score == 3) {
         printf("Excellent work!\n");
     } else if (score == 1) {
         printf("Good try, but you can do better!\n");
