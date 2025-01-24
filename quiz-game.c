@@ -1,12 +1,11 @@
 #include <stdio.h>
-#include <ctype.h> //For toupper or tolower functions
+#include <ctype.h>
 
 void displayQuestion(char question[], char options[][50], char correctOption){
     printf("\n%s\n", question);
     for (int i = 0; i<4; i++){
         printf("%c) %s\n", 'A' + i, options[i]);
     }
-    printf("Your answer: ");
 }
 
 int main(){
@@ -20,7 +19,7 @@ int main(){
     // Display the question and options
     displayQuestion(question1, options1, correctOption1);
     // Get user input
-    char answer;
+    char answer; 
     scanf(" %c", &answer);
 
     // Convert answer to uppercase for case-insensitive comparison
